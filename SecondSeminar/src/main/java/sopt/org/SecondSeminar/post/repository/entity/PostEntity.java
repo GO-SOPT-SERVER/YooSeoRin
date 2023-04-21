@@ -2,9 +2,6 @@ package sopt.org.SecondSeminar.post.repository.entity;
 
 import lombok.*;
 
-import javax.persistence.*;
-import java.time.LocalDateTime;
-
 //@Entity
 //@NoArgsConstructor(access = AccessLevel.PROTECTED)
 //@AllArgsConstructor

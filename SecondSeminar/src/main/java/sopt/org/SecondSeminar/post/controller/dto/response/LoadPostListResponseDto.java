@@ -10,5 +10,5 @@ import java.util.List;
 @AllArgsConstructor
 public class LoadPostListResponseDto {
 
-    private List<LoadPostResponseDto> postResponseDtoList;
+    private List<LoadPostResponseDto> postList;
 }

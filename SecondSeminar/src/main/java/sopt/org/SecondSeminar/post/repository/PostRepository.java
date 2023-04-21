@@ -1,8 +1,6 @@
 package sopt.org.SecondSeminar.post.repository;
 
 
-import sopt.org.SecondSeminar.post.controller.dto.response.LoadPostListResponseDto;
-import sopt.org.SecondSeminar.post.controller.dto.response.LoadPostResponseDto;
 import sopt.org.SecondSeminar.post.repository.entity.PostEntity;
 
 import java.util.List;

@@ -45,7 +45,6 @@ public class Post {
 
     public static Post fromRegisterPostRequestDto(RegisterPostRequestDto requestDto) {
         return Post.builder()
-                .id(requestDto.getId())
                 .title(requestDto.getTitle())
                 .content(requestDto.getContent())
                 .authorId(requestDto.getAuthorId())
