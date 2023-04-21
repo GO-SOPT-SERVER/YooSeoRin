@@ -15,5 +15,5 @@ public class LoadPostResponseDto {
     private Long id;
     private String title;
     private String content;
-    private String authorId;
+    private Long authorId;
 }

@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public class PostRegisterRequestDto {
+public class RegisterPostRequestDto {
 
     private Long id;
 
@@ -13,5 +13,5 @@ public class PostRegisterRequestDto {
 
     private String content;
 
-    private String authorId;
+    private Long authorId;
 }
