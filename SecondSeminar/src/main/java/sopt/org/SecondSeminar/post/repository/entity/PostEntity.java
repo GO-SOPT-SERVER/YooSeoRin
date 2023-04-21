@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 //@AllArgsConstructor
 //@Builder
 @Getter
+@AllArgsConstructor
+@Builder
 public class PostEntity {
 
 //    @Id

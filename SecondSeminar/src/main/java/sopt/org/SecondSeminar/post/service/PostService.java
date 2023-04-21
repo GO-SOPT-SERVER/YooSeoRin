@@ -1,8 +1,8 @@
 package sopt.org.SecondSeminar.post.service;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.*;
+import sopt.org.SecondSeminar.post.controller.dto.request.ModifyPostRequestDto;
+import sopt.org.SecondSeminar.post.controller.dto.request.RegisterPostRequestDto;
 import sopt.org.SecondSeminar.post.controller.dto.response.LoadPostListResponseDto;
 import sopt.org.SecondSeminar.post.controller.dto.response.LoadPostResponseDto;
 
@@ -13,9 +13,9 @@ public interface PostService {
 
     LoadPostListResponseDto getPostList();
 
-    void CreatePost();
+    void createPost(RegisterPostRequestDto requestDto);
 
-    void modifyPost();
+    void modifyPost(Long postId, ModifyPostRequestDto requestDto);
 
-    void deletePost();
+    void deletePost(Long postId);
 }
