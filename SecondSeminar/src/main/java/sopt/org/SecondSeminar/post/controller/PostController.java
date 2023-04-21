@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import sopt.org.SecondSeminar.global.response.JsonResponse;
+import sopt.org.SecondSeminar.post.controller.dto.request.ModifyPostRequestDto;
+import sopt.org.SecondSeminar.post.controller.dto.request.RegisterPostRequestDto;
 import sopt.org.SecondSeminar.post.controller.dto.response.LoadPostListResponseDto;
 import sopt.org.SecondSeminar.post.controller.dto.response.LoadPostResponseDto;
 import sopt.org.SecondSeminar.post.service.PostService;
@@ -29,20 +31,20 @@ public class PostController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createPost() {
-        postService.CreatePost();
+    public ResponseEntity<?> createPost(@RequestBody RegisterPostRequestDto request) {
+        postService.createPost(request);
         return JsonResponse.ok(HttpStatus.OK, "포스트 생성을 성공했습니다");
     }
 
     @PutMapping("/{postId}")
-    public ResponseEntity<?> modifyPost(@PathVariable Long postId) {
-        postService.modifyPost();
+    public ResponseEntity<?> modifyPost(@PathVariable Long postId, @RequestBody ModifyPostRequestDto request) {
+        postService.modifyPost(postId, request);
         return JsonResponse.ok(HttpStatus.OK, "포스트 수정을 성공했습니다");
     }
 
     @DeleteMapping("/{postId}")
     public ResponseEntity<?> deletePost(@PathVariable Long postId) {
-        postService.deletePost();
+        postService.deletePost(postId);
         return JsonResponse.ok(HttpStatus.OK, "포스트 삭제를 성공했습니다");
     }
 }
