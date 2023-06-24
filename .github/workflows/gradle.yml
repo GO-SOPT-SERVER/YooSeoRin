@@ -31,8 +31,8 @@ jobs:
     - name: make application.properties 파일 생성
       run: |
         ## create application.yml
-        mkdir ./src/main/resources
-        cd ./src/main/resources
+        mkdir ./SecondSeminar/src/main/resources
+        cd ./SecondSeminar/src/main/resources
 
         # application.yml 파일 생성
         touch ./application.yml
